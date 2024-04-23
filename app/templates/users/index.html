@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3>Index page of users page</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Is Active</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.is_active }}</td>
+        </tr>
+    </table>
+    {% endfor %}
+{% endblock %}

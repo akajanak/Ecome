@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom | {% block title %} {% endblock %}</title>
+    <style>
+        h2 {
+            width: 100%;
+        }
+
+        nav a {
+            color: #d64161;
+            font-size: 2rem;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        table, th, td{
+            border: 2px solid greenyellow;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('users.index') }}">Users</a>
+            <a href="#">Products</a>
+        </nav>
+    </header>
+    <main class="content">
+        {% block content %} {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
